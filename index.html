@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictive Maintenance</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            background: url('https://images.unsplash.com/photo-1570782307765-3b93c1210b05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fGZhY3RvcnklMkBtYWNoaW5lfGVufDB8fHx8fDE2Mjg4NjA0NDg&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Predictive Maintenance</h1>
+        <form method="POST" action="/predict">
+            <div class="form-group">
+                <label for="operating_hours">Operating Hours</label>
+                <input type="number" class="form-control" id="operating_hours" name="operating_hours" required>
+            </div>
+            <div class="form-group">
+                <label for="temperature">Temperature (°C)</label>
+                <input type="number" class="form-control" id="temperature" name="temperature" required>
+            </div>
+            <div class="form-group">
+                <label for="vibration_level">Vibration Level (mm/s)</label>
+                <input type="number" step="0.1" class="form-control" id="vibration_level" name="vibration_level" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age (years)</label>
+                <input type="number" class="form-control" id="age" name="age" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Predict</button>
+        </form>
+        <div class="footer">
+            Developed by Vineet Kumar
+        </div>
+    </div>
+</body>
+</html>

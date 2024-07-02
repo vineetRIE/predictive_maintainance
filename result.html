@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictive Maintenance Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            background: url('https://images.unsplash.com/photo-1570782307765-3b93c1210b05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fGZhY3RvcnklMkBtYWNoaW5lfGVufDB8fHx8fDE2Mjg4NjA0NDg&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <h1>Predictive Maintenance Result</h1>
+        <p>{{ prediction }}</p>
+        <p>{{ expected_days }}</p>
+        <a href="/" class="btn btn-primary">Back to Home</a>
+        <div class="footer">
+            Developed by Vineet Kumar
+        </div>
+    </div>
+</body>
+</html>
